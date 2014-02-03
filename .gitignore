@@ -1,0 +1,12 @@
+*.egg
+*.egg-info
+*.pyc
+.*
+bin
+build
+develop-eggs
+dist
+parts
+setuptools-*
+whoami.txt
+!.gitignore
