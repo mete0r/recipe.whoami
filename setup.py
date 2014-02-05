@@ -37,7 +37,7 @@ license = 'GNU Lesser General Public License v3 or later (LGPLv3+)'
 url = 'https://github.com/mete0r/recipe.whoami'
 
 description = 'a zc.buildout recipe to know whoami'
-long_description = _readfile('README.rst')
+long_description = _readfile('README')
 classifiers = '''
 Development Status :: 3 - Alpha
 Environment :: Plugins
