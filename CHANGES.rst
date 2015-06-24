@@ -4,7 +4,7 @@ Changes
 0.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix setup.
 
 
 0.1.0 (2015-06-25)

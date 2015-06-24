@@ -95,7 +95,7 @@ tests_require = [
 setup_info = {
     'name': 'mete0r.recipe.whoami',
     'version': get_version(),
-    'description': 'SOME_DESCRIPTION',
+    'description': 'a zc.buildout recipe to know whoami',
     'long_description': readfile('README.rst') + readfile('CHANGES.rst'),
 
     'author': 'mete0r',
