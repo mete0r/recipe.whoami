@@ -17,49 +17,13 @@
 #
 #   You should have received a copy of the GNU Lesser General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-from distutils.spawn import find_executable
+from __future__ import absolute_import
+from __future__ import unicode_literals
+
+from unittest import TestCase
 
 
-__version__ = '0.1.0.dev1'
+class RecipeTest(TestCase):
 
-try:
-    from subprocess import check_output
-except ImportError:
-    raise NotImplementedError('subprocess:check_output')
-
-
-ITEM_OPT_MAP = {
-    'user': 'un',
-    'user-id': 'u',
-    'group': 'gn',
-    'group-id': 'g',
-    'real-user': 'unr',
-    'real-user-id': 'ur',
-    'real-group': 'gnr',
-    'real-group-id': 'gr',
-}
-
-
-id_executable = find_executable('id')
-
-
-def get(item):
-    if not id_executable:
-        return None
-
-    opt = ITEM_OPT_MAP[item]
-    stdout = check_output([id_executable, '-' + opt])
-    return stdout.strip()
-
-
-class Recipe:
-
-    def __init__(self, buildout, name, options):
-        for item in ITEM_OPT_MAP.keys():
-            options[item] = get(item)
-
-    def install(self):
-        return []
-
-    def update(self):
+    def test_nothing(self):
         pass
