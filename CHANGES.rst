@@ -1,7 +1,7 @@
 Changes
 =======
 
-0.1.2 (unreleased)
+0.1.2 (2018-10-27)
 ------------------
 
 - Python 3 support.
