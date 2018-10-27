@@ -4,7 +4,7 @@ Changes
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Python 3 support.
 
 
 0.1.1 (2015-06-25)
