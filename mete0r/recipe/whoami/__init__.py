@@ -49,7 +49,10 @@ def get(item):
 
     opt = ITEM_OPT_MAP[item]
     stdout = check_output([id_executable, '-' + opt])
-    return stdout.strip()
+    output = stdout.strip()
+    if not isinstance(output, str):
+        output = output.decode('utf-8')
+    return output
 
 
 class Recipe:

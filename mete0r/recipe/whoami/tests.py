@@ -25,5 +25,8 @@ from unittest import TestCase
 
 class RecipeTest(TestCase):
 
-    def test_nothing(self):
-        pass
+    def test_options(self):
+        from mete0r.recipe.whoami import Recipe
+        buildout = {}
+        options = {}
+        Recipe(buildout, 'whoami', options)
