@@ -19,6 +19,7 @@
 from __future__ import with_statement
 from contextlib import contextmanager
 import os.path
+import re
 import sys
 
 
@@ -70,8 +71,12 @@ def readfile(path):
 
 @setup_dir
 def get_version():
-    from mete0r.recipe.whoami import __version__
-    return __version__
+    source = readfile('src/mete0r/recipe/whoami/__init__.py')
+    version_match = re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]',
+                              source, re.M)
+    if not version_match:
+        raise RuntimeError('Unable to find version string.')
+    return version_match.group(1)
 
 
 def alltests():
@@ -87,9 +92,10 @@ def alltests():
     return unittest.TestSuite(suites)
 
 
-tests_require = [
-    'zope.testrunner',
-]
+install_requires_filename = 'requirements.in'
+install_requires = readfile(install_requires_filename)
+
+tests_require = readfile('requirements/test.in')
 
 
 setup_info = {
@@ -112,10 +118,10 @@ setup_info = {
         'mete0r.recipe',
         'mete0r.recipe.whoami'
     ],
-    'package_dir': {'': '.'},
-    'install_requires': [
-        'zc.buildout',
-    ],
+    'package_dir': {
+        '': 'src'
+    },
+    'install_requires': install_requires,
     'test_suite': '__main__.alltests',
     'tests_require': tests_require,
     'extras_require': {

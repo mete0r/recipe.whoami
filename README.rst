@@ -1,3 +1,6 @@
+mete0r.recipe.whoami
+====================
+
 Usage
 -----
 
@@ -24,3 +27,15 @@ A sample buildout.
          real-group=${whoami:real-group}
          real-group-id=${whoami:real-group-id}
 
+
+
+
+Development environment
+-----------------------
+
+To setup development environment::
+
+   virtualenv -p python2.7 .
+   bin/pip install -U setuptools pip pip-tools
+   make
+   make test
