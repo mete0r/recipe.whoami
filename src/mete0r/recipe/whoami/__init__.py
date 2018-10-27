@@ -20,7 +20,7 @@
 from distutils.spawn import find_executable
 
 
-__version__ = '0.1.2'
+__version__ = '0.1.3.dev0'
 
 try:
     from subprocess import check_output
