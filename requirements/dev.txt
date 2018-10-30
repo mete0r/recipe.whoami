@@ -52,7 +52,7 @@ pytz==2018.6              # via babel
 readme-renderer==23.0     # via restview, twine
 repoze.sphinx.autointerface==0.8
 requests-toolbelt==0.8.0  # via twine
-requests==2.20.0          # via requests-toolbelt, sphinx, twine, zest.releaser
+requests==2.20.0
 restview==2.9.1
 scandir==1.9.0            # via pathlib2
 six==1.11.0               # via bleach, eventlet, more-itertools, packaging, pathlib2, pip-tools, pytest, readme-renderer, sphinx, sphinx-intl, tox, zest.releaser
