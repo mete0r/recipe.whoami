@@ -31,7 +31,7 @@ greenlet==0.4.15          # via eventlet
 humanfriendly==4.17       # via coloredlogs
 idna==2.7                 # via requests
 imagesize==1.1.0          # via sphinx
-jinja2==2.10              # via sphinx
+jinja2==2.10.1            # via sphinx
 markupsafe==1.0           # via jinja2
 mccabe==0.6.1             # via flake8
 monotonic==1.5            # via eventlet, humanfriendly
