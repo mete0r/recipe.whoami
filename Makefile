@@ -90,6 +90,6 @@ requirements/dev.txt: $(REQUIREMENTS_IN_DEV)
 
 .PHONY: test
 test: requirements/test.txt
-	$(VENV) tox -e py27,py34,pypy
+	$(VENV) tox -p 4 -e py38,pypy3
 	$(VENV) coverage combine
 	$(VENV) coverage report
